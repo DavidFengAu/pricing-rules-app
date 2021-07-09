@@ -18,7 +18,7 @@ export default class Customers {
     ]
   }
 
-  static getPricingRule(customerName: string): PricingRule[] {
+  static getPricingRule(customerName: string = 'Default'): PricingRule[] {
     return this.customers[customerName] ?? []
   }
 }

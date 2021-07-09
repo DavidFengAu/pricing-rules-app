@@ -7,7 +7,7 @@ class CheckOut {
   readonly products: Product[]
 
   constructor(
-    rules: PricingRule[],
+    rules: PricingRule[] = [],
     products: Product[] = []
   ) {
     this.rules = rules
@@ -16,6 +16,10 @@ class CheckOut {
 
   add(productId: ProductId): CheckOut {
     return new CheckOut(this.rules, _.concat(this.products, Products.getProduct(productId)))
+  }
+
+  empty(): CheckOut {
+    return new CheckOut(this.rules)
   }
 
   updateRules(rules: PricingRule[]): CheckOut {

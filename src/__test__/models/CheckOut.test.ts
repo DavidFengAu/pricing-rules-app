@@ -9,7 +9,7 @@ describe('Check Out', () => {
   const premiumAd = Products.getProduct(ProductId.Premium)
 
   it('should not apply pricing rules for Default customers', () => {
-    const rules = Customers.getPricingRule('Default')
+    const rules = Customers.getPricingRule()
     const checkOut = new CheckOut(rules)
       .add(ProductId.Classic)
       .add(ProductId.StandOut)

@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+# Pricing Rule React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The main purpose of this repository is to implement a pricing rule react app that 
+could create various pricing rules and apply rules to products in a shopping cart.
+
+## Features
+- Flexible in supporting products with different retail price.
+- Flexible in creating new pricing rules (inc. rule type), and combining multiple rules.
+- Apply rules to the shopping cart automatically, and return the total discounted price.
+
+## Example
+![alt text](example.png)
+
+## Getting started
+
+### Pre-requisites
+- Install [Node.js](https://nodejs.org/en/) version >= 12.16.x
+- Install [Yarn](https://yarnpkg.com/getting-started/install)
+
+### Run this project locally
+- Clone the repository
+```
+git clone https://github.com/DavidFengAu/pricing-rules-app.git <project_name>
+```
+- Install dependencies
+```
+cd <project_name>
+yarn install
+```
+- Build and run the project
+```
+yarn start
+```
+
+- Open http://localhost:3000
+
+### Deployment
+- Build the project for deployment
+```
+yarn build
+```
+
+### Testing
+- Run testings in watch mode
+```
+yarn test
+```
+
+## Project Structure
+The folder structure of this project is explained below:
+
+| Name | Description |
+| ------------------------      | --------------------------------------------------------------------------------------------- |
+| **coverage**                  | Contains the code coverage report generated. Run `yarn coverage` |
+| **build**                     | Contains the distributable (or output) from your TypeScript build. Run `yarn build` |
+| **node_modules**              | Contains all dependencies. Run `yarn install` |
+| **src**                       | Contains source code. |
+| **src/components**            | React components. |
+| **src/models**                | Business models. |
+| **src**/App.tsx               | Main panel. |
+| **src**/index.tsx             | Entry point. |
+| **src/__test__**              | Contains test cases. |
+| package.json                  | Contains dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped). |
+| tsconfig.json                 | Config settings for TypeScript compiling. |
+| tslint.json                   | Config settings for TSLint code style checking. |
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Yarn Script | Description |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| `start`           | Runs the app locally. |
+| `build     `      | Runs full build for deployment. |
+| `test`            | Runs testing in watch mode. |
+| `coverage`        | Runs testing and create code coverage report. |
+| `lint`            | Runs TSLint for code style checking. |
 
-### `yarn start`
+## Contributing
+I understand this might not be the perfect project structure and solution.
+If you have any ideas, please open an issue and tell me what you think.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Useful Links
 
-### `yarn test`
+Here is a list of useful links you might be interested:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Create react app: https://reactjs.org/docs/create-a-new-react-app.html
+- Lodash docs：https://lodash.com/docs/4.17.15
+- TS config: https://www.typescriptlang.org/tsconfig
+- TSLint config: https://palantir.github.io/tslint/usage/configuration/
